@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lingga Bagus Bayuanggara | Portofolio</title>
+<meta name="description" content="Portofolio Lingga Bagus Bayuanggara, mahasiswa Pendidikan Teknologi Informasi UNESA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1116; --bg2:#151a22; --card:#1a2029; --line:#2a3340;
+  --text:#e8edf3; --muted:#9aa7b6; --accent:#5eead4; --accent2:#818cf8;
+}
+:root[data-theme="light"]{
+  --bg:#f6f8fb; --bg2:#ffffff; --card:#ffffff; --line:#dde3ec;
+  --text:#14202e; --muted:#566578; --accent:#0d9488; --accent2:#4f46e5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;transition:background .3s,color .3s}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:6px;
+  background:color-mix(in srgb,var(--bg2) 85%,transparent);backdrop-filter:blur(12px);border:1px solid var(--line);
+  border-radius:999px;padding:6px 8px 6px 14px;max-width:calc(100% - 24px)}
+nav .logo{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;margin-right:8px;white-space:nowrap;font-size:.95rem}
+nav a.link{font-size:.82rem;color:var(--muted);padding:6px 10px;border-radius:999px;transition:.2s}
+nav a.link:hover{color:var(--text);background:var(--line)}
+nav button{background:none;border:1px solid var(--line);color:var(--text);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:.95rem}
+nav .hire{background:var(--text);color:var(--bg);font-size:.8rem;font-weight:600;padding:7px 14px;border-radius:999px;white-space:nowrap}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 60px}
+.hero::before{content:"LINGGA";position:absolute;left:-2%;top:50%;transform:translateY(-50%);font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;
+  font-size:clamp(7rem,26vw,22rem);color:transparent;-webkit-text-stroke:1px var(--line);white-space:nowrap;opacity:.7;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:18px}
+.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:520px;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.9rem;border:1px solid var(--line);transition:.2s}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn:hover{transform:translateY(-2px)}
+.avatar{justify-self:center;width:min(320px,72vw);aspect-ratio:4/5;border-radius:32px;overflow:hidden;position:relative;
+  border:1px solid var(--line);box-shadow:0 30px 80px -30px var(--accent2)}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.avatar small{position:absolute;left:12px;bottom:12px;font-size:.7rem;font-weight:600;letter-spacing:.1em;background:rgba(14,17,22,.75);color:#e8edf3;padding:4px 10px;border-radius:999px}
+
+/* SECTIONS */
+section{padding:90px 0}
+.alt{background:var(--bg2)}
+.head{margin-bottom:40px}
+.head h2{font-size:clamp(2rem,4.5vw,3rem)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:28px}
+.profile{display:flex;flex-direction:column;gap:14px}
+.profile .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px;font-size:.92rem}
+.profile .row:last-child{border:0;padding:0}
+.profile .row span:first-child{color:var(--muted)}
+.profile .row span:last-child{font-weight:600;text-align:right}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+.stat{border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.stat b{display:block;font-family:'Space Grotesk',system-ui,sans-serif;font-size:1.7rem;color:var(--accent)}
+.stat span{font-size:.75rem;color:var(--muted)}
+.now{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.now div{font-size:.85rem}
+.now b{display:block;font-size:.9rem}
+.now span{color:var(--muted)}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill .num{font-family:'Space Grotesk',system-ui,sans-serif;font-size:2.2rem;color:var(--accent);opacity:.9}
+.skill h3{font-size:1.2rem;margin:6px 0 10px}
+.skill p{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.75rem;border:1px solid var(--line);border-radius:8px;padding:4px 10px;color:var(--muted);font-family:ui-monospace,monospace}
+
+/* ACHIEVEMENT */
+.timeline{display:grid;gap:18px}
+.ach{display:grid;grid-template-columns:150px 1fr;gap:22px}
+.ach .meta{font-size:.82rem;color:var(--accent);font-weight:600}
+.ach .meta small{display:block;color:var(--muted);font-weight:400;margin-top:2px}
+.ach h3{font-size:1.15rem;margin-bottom:6px}
+.ach p{color:var(--muted);font-size:.92rem}
+.note{margin-top:18px;font-size:.85rem;color:var(--muted)}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(2.4rem,6vw,4.2rem);text-transform:uppercase}
+.contact p{color:var(--muted);margin:16px 0 24px;max-width:420px}
+.links{display:grid;gap:12px}
+.links a{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;transition:.2s}
+.links a:hover{border-color:var(--accent);transform:translateX(4px)}
+.links small{display:block;font-size:.68rem;letter-spacing:.12em;color:var(--muted)}
+.links b{font-size:.92rem;word-break:break-all}
+footer{text-align:center;padding:26px 20px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:.7s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:820px){
+  .hero .wrap,.about,.contact{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr}
+  .ach{grid-template-columns:1fr;gap:6px}
+  .avatar{order:-1;width:180px;font-size:3.6rem}
+  nav a.link{display:none}
+  section{padding:70px 0}
+}
+@media(prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">Lingga B.B.</span>
+  <a class="link" href="#about">About</a>
+  <a class="link" href="#skills">What I Can Do</a>
+  <a class="link" href="#achievement">Achievement</a>
+  <button id="theme" aria-label="Ganti tema">☾</button>
+  <a class="hire" href="#contact">Hubungi</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Portofolio Mahasiswa Informatika</p>
+      <h1>Halo, saya <span>Lingga Bagus Bayuanggara</span></h1>
+      <p>Mahasiswa Pendidikan Teknologi Informasi UNESA yang suka membuat video, belajar pemrograman, dan ingin membantu orang memakai teknologi dengan bijak.</p>
+      <div class="btns">
+        <a class="btn primary" href="#about">Kenali saya</a>
+        <a class="btn" href="#contact">Kontak</a>
+      </div>
+    </div>
+    <div class="avatar"><img src="foto.jpg" alt="Foto Lingga Bagus Bayuanggara" width="640" height="800"><small>UNESA · PTI</small></div>
+  </div>
+</header>
+
+<section id="about" class="alt">
+  <div class="wrap">
+    <div class="head rv"><p class="eyebrow">About Me</p><h2>Belajar, berkarya, berbagi.</h2></div>
+    <div class="about">
+      <div class="card profile rv">
+        <div class="row"><span>Nama</span><span>Lingga Bagus Bayuanggara</span></div>
+        <div class="row"><span>NIM</span><span>26050974118</span></div>
+        <div class="row"><span>Prodi</span><span>Pendidikan Teknologi Informasi</span></div>
+        <div class="row"><span>Kelompok</span><span>19 (Kernel)</span></div>
+        <div class="row"><span>Fakultas</span><span>Teknik</span></div>
+        <div class="row"><span>Kampus</span><span>Universitas Negeri Surabaya</span></div>
+        <div class="row"><span>Asal sekolah</span><span>SMA Negeri 2 Probolinggo (IPA)</span></div>
+        <div class="row"><span>Bahasa</span><span>Indonesia, English</span></div>
+      </div>
+      <div class="rv">
+        <p>Saya mahasiswa baru di Universitas Negeri Surabaya, berasal dari Probolinggo. Di SMA saya sekitar tiga tahun menekuni videografi dan penyuntingan video, aktif di bidang dokumentasi, serta belajar pemrograman. Sekarang saya belajar dasar-dasar informatika sekaligus mencoba proyek kecil seperti website dan diagram basis data, serta tertarik pada pengembangan game.</p>
+        <div class="stats">
+          <div class="stat"><b>2026</b><span>Mulai kuliah</span></div>
+          <div class="stat"><b>3</b><span>Organisasi SMA</span></div>
+          <div class="stat"><b>3 th</b><span>Videografi &amp; editing</span></div>
+        </div>
+        <p style="margin-bottom:18px">Saya tertarik mengajarkan literasi digital lintas generasi, agar orang muda maupun yang lebih tua bisa memakai HP dan laptop dengan sadar, bukan sekadar mengikuti arahan orang lain.</p>
+        <div class="now">
+          <div><b>Membangun</b><span>Website &amp; proyek kecil</span></div>
+          <div><b>Menjelajahi</b><span>Basis data &amp; game dev</span></div>
+          <div><b>Mempelajari</b><span>Pemrograman dasar</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="head rv"><p class="eyebrow">My Capabilities</p><h2>What I Can Do</h2></div>
+    <div class="skills">
+      <article class="card skill rv">
+        <div class="num">01</div><h3>Web &amp; Pemrograman</h3>
+        <p>Membuat halaman web statis dan belajar logika pemrograman lewat proyek kecil.</p>
+        <div class="tags"><span>HTML5</span><span>Python</span><span>Git</span><span>GitHub</span></div>
+      </article>
+      <article class="card skill rv">
+        <div class="num">02</div><h3>Basis Data</h3>
+        <p>Merancang ERD dan membuat tabel serta relasi untuk studi kasus sederhana.</p>
+        <div class="tags"><span>MySQL</span><span>phpMyAdmin</span><span>ERD</span><span>Draw.io</span></div>
+      </article>
+      <article class="card skill rv">
+        <div class="num">03</div><h3>Video &amp; Dokumentasi</h3>
+        <p>Sekitar 3 tahun menyunting video dan mendokumentasikan kegiatan, dari organisasi hingga tugas kuliah.</p>
+        <div class="tags"><span>Video Editing</span><span>Videography</span><span>Video Production</span><span>Dokumentasi</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="achievement" class="alt">
+  <div class="wrap">
+    <div class="head rv"><p class="eyebrow">Achievement</p><h2>Pengalaman &amp; Pencapaian</h2></div>
+    <div class="timeline">
+      <article class="card ach rv">
+        <div class="meta">2026<small>UNESA</small></div>
+        <div><h3>Mahasiswa Baru Pendidikan Teknologi Informasi</h3>
+        <p>Peserta Pra-PKKMB, PKKMB Fakultas Teknik, dan Ameliorer Informatika di Universitas Negeri Surabaya.</p></div>
+      </article>
+      <article class="card ach rv">
+        <div class="meta">2026<small>Tugas perkuliahan</small></div>
+        <div><h3>Diagram Relasi Entitas (ERD) YouTube</h3>
+        <p>Merancang ERD untuk studi kasus YouTube menggunakan Draw.io.</p></div>
+      </article>
+      <article class="card ach rv">
+        <div class="meta">Okt 2023 – Sep 2026<small>Smada Sinema, SMA Negeri 2 Probolinggo</small></div>
+        <div><h3>Video Editor</h3>
+        <p>Mengedit video dokumentasi dan konten acara sekolah serta mengikuti berbagai proyek organisasi selama 3 tahun.</p></div>
+      </article>
+      <article class="card ach rv">
+        <div class="meta">Sep 2023 – Nov 2025<small>Pramsmada, SMA Negeri 2 Probolinggo</small></div>
+        <div><h3>Dokumentasi Pramuka</h3>
+        <p>Mendokumentasikan acara dan kepanitiaan Pramuka sekolah.</p></div>
+      </article>
+      <article class="card ach rv">
+        <div class="meta">Sep 2023 – Okt 2025<small>Programming Smada, SMA Negeri 2 Probolinggo</small></div>
+        <div><h3>Anggota Programming Smada</h3>
+        <p>Belajar pemrograman dan penulisan kode bersama komunitas Programming SMA Negeri 2 Probolinggo.</p></div>
+      </article>
+    </div>
+    <p class="note rv">Bagian ini akan terus bertambah seiring perjalanan kuliah dan proyek-proyek berikutnya.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's work together</h2>
+      <p>Terbuka untuk berdiskusi, kolaborasi proyek, dan belajar bareng seputar teknologi informasi.</p>
+      <a class="btn primary" href="mailto:26050974118@mhs.unesa.ac.id">Kirim pesan →</a>
+    </div>
+    <div class="links rv">
+      <a href="mailto:26050974118@mhs.unesa.ac.id"><div><small>EMAIL</small><b>26050974118@mhs.unesa.ac.id</b></div></a>
+      <a href="https://github.com/AltStrom" target="_blank" rel="noopener"><div><small>GITHUB</small><b>github.com/AltStrom</b></div></a>
+      <a href="https://www.linkedin.com/in/lingga-bagus-bayuanggara-1471273a4/" target="_blank" rel="noopener"><div><small>LINKEDIN</small><b>linkedin.com/in/lingga-bagus-bayuanggara-1471273a4</b></div></a>
+      <a href="CV_Lingga_Bagus_Bayuanggara.pdf" target="_blank" rel="noopener"><div><small>CV / RESUME</small><b>Unduh CV (PDF)</b></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Lingga Bagus Bayuanggara. Dibuat untuk tugas Ameliorer Informatika UNESA.</footer>
+
+<script>
+const root=document.documentElement,btn=document.getElementById('theme');
+try{const s=localStorage.getItem('theme');if(s){root.dataset.theme=s}}catch(e){}
+function sync(){btn.textContent=root.dataset.theme==='light'?'☀':'☾'}
+sync();
+btn.onclick=()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){};sync()};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
